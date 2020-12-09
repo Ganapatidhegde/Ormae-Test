@@ -1,0 +1,50 @@
+.table-container{
+    height:85vh;
+    overflow: auto;
+    width: 90%;
+    margin: 20px auto ;
+    border: 1px solid #eaeaea;
+   
+
+}
+.table-heading{
+    border-bottom: 1px solid #eaeaea;
+    margin-bottom: 20px;
+}
+.image-style{
+    height: 150px;
+    width: 150px;
+}
+.delete-button{
+    background-color: #ED5E68;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+    padding: 10px ;
+    border-radius: 4px;
+}
+.flex{
+    display: flex;
+}
+.center{
+    align-items: center;
+}
+.row-container {
+    padding: 10px 0;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.text-align-center{
+    text-align: center;
+}
+.width-10{
+    width: 10%;
+}
+.width-35{
+    width:35%
+}
+.title-font {
+    font-size: 20px;
+    font-weight: bold;
+}
+
