@@ -13,7 +13,7 @@ function DataTable(props) {
 
   return (
     <div className="table-container">
-      <div className="row-container center flex table-heading">
+      <div className="row-container center flex table-heading title-font">
         {tableHeaderData.map((col, key) => (
           <div
             key={key}
