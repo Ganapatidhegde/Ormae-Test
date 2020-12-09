@@ -4,7 +4,7 @@ import "./style.css";
 
 function DataTable(props) {
   const [globalState] = useGlobal();
-  const columns = globalState.columns;
+  const tableHeaderData = globalState.tableHeaderData;
   const data = globalState.tableData;
 
   const onDeleteClick = (rowData) => {
@@ -14,7 +14,7 @@ function DataTable(props) {
   return (
     <div className="table-container">
       <div className="row-container center flex table-heading">
-        {columns.map((col, key) => (
+        {tableHeaderData.map((col, key) => (
           <div
             key={key}
             className={`text-align-center ${
@@ -29,7 +29,7 @@ function DataTable(props) {
       <div>
         {data.map((item, key) => (
           <div key={key} className="row-container center flex">
-            {columns.map((col, index) => (
+            {tableHeaderData.map((col, index) => (
               <>
                 {index !== 3 ? (
                   <div
