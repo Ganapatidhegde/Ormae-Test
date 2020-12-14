@@ -10,6 +10,9 @@ function DataTable(props) {
   const onDeleteClick = (rowData) => {
     props.deleteRow(rowData.id);
   };
+  const editTitle = (e, updatedContent) => {
+    e.currentTarget.innerText = updatedContent;
+  };
 
   return (
     <div className="table-container">
@@ -29,11 +32,17 @@ function DataTable(props) {
       <div>
         {data.map((item, key) => (
           <div key={key} className="row-container center flex">
-            {tableHeaderData.map((col, index) => (
+            {tableHeaderData.map((col, index, key) => (
               <>
                 {index !== 3 ? (
                   <div
-                    className={`text-align-center ${
+                    onClick={(event) => {
+                      index === 2 &&
+                        editTitle(event, "This is the changed content");
+                    }}
+                    key={key}
+                    id="titleId"
+                    className={`text-align-center title-field ${
                       index === 0 || index === 1 ? "width-10" : "width-35"
                     }`}
                   >
